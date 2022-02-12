@@ -22,4 +22,13 @@ router.post('/message', createMessageController.handle)
 router.get('/product', listProductController.hanle)
 router.post('/product', createProductController.handle)
 
+router.get('/product/:category', async (req: Request<{ category: string }>, res: Response) => {
+    try {
+        const category = req.params.category;
+        // return res.status(200).json(category);
+    } catch (error) {
+        
+    }
+});
+
 export { router }
